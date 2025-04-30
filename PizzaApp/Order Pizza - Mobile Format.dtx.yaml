@@ -1,0 +1,60 @@
+note: Generated from recorded traffic
+configuration:
+  vars:
+    URL: 169.63.124.56
+steps:
+  - open:
+      note: Open http://localhost:8000/
+      meta:
+        browserName: edge
+        browserVersion: 133.0.3065.82
+        platformName: windows
+      url: http://${URL}:80
+  - with:
+      note: Pizza Delight - Your Favorite Pizza Delivered Fast
+      steps:
+        - select:
+            shot: Pizza Delight - Your Favorite Pizza Delivered Fa_crvaba.dti.jpeg#54
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Quantity:'
+                locators:
+                  - below:
+                      object: html.h2
+                      properties:
+                        - content:
+                            - val: Our Menu
+            value: '3'
+        - click:
+            shot: Pizza Delight - Your Favorite Pizza Delivered Fa_yuqiiz.dti.jpeg#99
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Add to Cart
+                locators:
+                  - below:
+                      object: html.h2
+                      properties:
+                        - content:
+                            - val: Our Menu
+        - verify:
+            shot: Pizza Delight - Your Favorite Pizza Delivered Fa_6rbq3n.dti.jpeg#169
+            object: html.p
+            identifiers:
+              - object: html.p
+                properties:
+                  - xpath:
+                      - val: //html/body/div/p
+            properties:
+              - content:
+                  - val: Buy 1 Get 1 Free on all medium pizzas!
+        - click:
+            shot: Pizza Delight - Your Favorite Pizza Delivered Fa_6rbq3n.dti.jpeg#169
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Buy Now
