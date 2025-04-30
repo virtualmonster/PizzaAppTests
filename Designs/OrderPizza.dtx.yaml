@@ -1,0 +1,64 @@
+note: Generated from recorded traffic
+configuration:
+    vars:
+            RTW_WebUI_Browser_Selection: Chrome
+steps:
+    - open:
+        note: 'Open http://169.63.124.56/'
+        url: http://169.63.124.56/
+    - with:
+        note: 'PizzaApp'
+        steps:
+            - click:
+                shot: A1F0000A5D0A3B70C393B66532373135.dti.jpeg#\/Window\/DropDown[3]
+                object: html.inputbutton
+                identifiers:
+                    - properties:
+                        - content:
+                            - val: Add To Order
+                      locators:
+                        - position: '1'
+            - click:
+                shot: A1F0000A5D31246CC393B66532373135.dti.jpeg#\/Window\/DropDown[6]
+                object: html.inputbutton
+                identifiers:
+                    - properties:
+                        - content:
+                            - val: Add To Order
+                      locators:
+                        - position: '2'
+            - click:
+                shot: A1F0000A83383FE0C393B66532373135.dti.jpeg#\/Window\/DropDown[8]
+                object: html.uidropdown
+                identifiers:
+                    - properties:
+                        - content:
+                            - val: Qty
+                      locators:
+                        - position: '3'
+            - click:
+                shot: A1F0000A5D4102ECC393B66532373135.dti.jpeg#\/Window\/Button
+                object: html.uibutton
+                identifiers:
+                    - properties:
+                        - content:
+                            - val: Add To Order
+                      locators:
+                        - position: '3'
+            - verify:
+                shot: A1F0000A976A89A0C393B66532373135.dti.jpeg#\/Window\/TextArea[4]
+                object: html.uiinputtextfield
+                identifiers:
+                    - properties:
+                        - content:
+                            - val: 'Total Price:'
+                properties:
+                    - content:
+                        - val: 'Total Price:'
+            - click:
+                shot: A1F0000A5D47B9ACC393B66532373135.dti.jpeg#\/Window\/Button[2]
+                object: html.uibutton
+                identifiers:
+                    - properties:
+                        - content:
+                            - val: Order Now
